@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: dimgrey;
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid dimgrey;
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+/* navbar */
+
+.navbar {
+    background-color: dimgrey;
+}
+
+@media (min-width: 792px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgb(36, 36, 36), rgb(36, 36, 36));
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar-brand img {
+        border: 2px solid rgb(68, 68, 68);
+    }
+    /* content */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+
+}
+
+/* button    */
+.btn {
+    padding: 5px 15px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: rgb(247, 215, 147);
+    border-color: rgb(247, 215, 147);
+    margin-top: 25px;
+}
+
+.btn-brand:hover, .btn:focus {
+    background-color: rgb(223, 183, 99);
+    color: black;
+
+    
+}
+
+/* stack */
+@media (min-width: 100px) {
+    /* stack */
+    .ul,li {
+        list-style-type: none;
+    }
+    
+    .skills {
+        width: 100%;
+        height: 238px;
+        box-shadow: 0 14px 28px rgb(32, 32, 32), 0 10px 10px rgb(32, 32, 32);
+    }
+    
+    .bar {
+        background: #4d4d4d;
+        display: block;
+        height: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        width: 90%;
+        border-radius: 10px;
+    }
+    
+    .bar:hover {
+        box-shadow: 0 14px 28px rgb(24, 24, 24), 0 10px 10px rgb(29, 29, 29);
+    }
+    
+    .bar span {
+        height: 20px;
+        float: left;
+    }
+    
+    .html {
+        width: 50%;
+        background: rgb(211, 160, 66);
+        animation: html 15s;
+    }
+    
+    .css {
+        width: 30%;
+        background: rgb(211, 160, 66);
+        animation: css 10s;
+    }
+    
+    .php {
+        width: 40%;
+        background: rgb(211, 160, 66);
+        animation: php 10s;
+    }
+    
+    .js {
+        width: 10%;
+        background: rgb(211, 160, 66);
+        animation: js 10s;
+    }
+    
+    @keyframes html {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 50%;
+        }
+    }
+    
+    @keyframes css {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 30%;
+        }
+    }
+    
+    @keyframes php {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 40%;
+        }
+    }
+    
+    @keyframes js {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 10%;
+        }
+    }
+    /* stack */
+
+    
+
+}
+
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+.card-custom:hover {
+    box-shadow: 0 14px 28px rgb(24, 24, 24), 0 10px 10px rgb(29, 29, 29);
+}
+
